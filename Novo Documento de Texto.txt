@@ -1,0 +1,31 @@
+OK OK MENU
+ 
+http://tympanus.net/codrops/2012/11/29/simple-effects-for-drop-down-lists/
+
+MENU2
+http://tympanus.net/codrops/2010/06/28/awesome-cufonized-fly-out-menu/
+
+
+MENU3
+http://tutorialzine.com/2010/06/css3-minimalistic-navigation-menu/
+
+MENU4
+http://tympanus.net/codrops/2011/07/12/animated-text-and-icon-menu/
+
+AFUDE
+http://tympanus.net/codrops/2010/09/06/collapsing-site-navigation/
+
+OK OK DIFERENTE 
+http://tympanus.net/Tutorials/ShapeHoverEffectSVG/index.html
+
+OK OK TABELA
+http://tympanus.net/Tutorials/StickyTableHeaders/index.html
+
+CARDAPIO
+http://tympanus.net/Tutorials/3DRestaurantMenu/
+
+PORTIFOLIO
+http://tympanus.net/codrops/2011/08/09/portfolio-image-navigation/
+
+ANOTAÇÕES
+http://tympanus.net/codrops/2010/10/12/annotation-overlay-effect/

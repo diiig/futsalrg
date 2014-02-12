@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Sticky Table Headers Revisited | Demo 2</title>
+		<meta name="description" content="Sticky Table Headers Revisited: Creating functional and flexible sticky table headers" />
+		<meta name="keywords" content="Sticky Table Headers Revisited" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+        
+		<script type="text/javascript" src="js/jquery-latest.js"></script>
+		<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+		<!--[if IE]>
+  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+        
+        <style>
+		.mao{
+			cursor:pointer;
+		}
+		
+
+/*
+Back to top button 
+*/
+#back-top {
+	position: fixed;
+	bottom: 3%;
+	left: 90%;
+}
+#back-top a {
+	width: 65px;
+	display: block;
+	text-align: center;
+	font: 11px/100% Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #bbb;
+	/* background color transition */
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	transition: 1s;
+}
+#back-top a:hover {
+	color: #000;
+}
+/* arrow icon (span tag) */
+#back-top span {
+	width: 65px;
+	height: 65px;
+	display: block;
+	margin-bottom: 7px;
+	background:url(scroll-to-top/demo-scroll-top/up-arrow.png) #ddd  no-repeat center center;
+	/* rounded corners */
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	/* background color transition */
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	transition: 1s;
+}
+#back-top a:hover span {
+	background-color: #777;
+}
+
+		</style>
+
+	</head>
+	<body>
+<script>
+$(document).ready(function(){
+
+	// hide #back-top first
+	$("#back-top").hide();
+	
+	// fade in #back-top
+	$(function () {
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 100) {
+				$('#back-top').fadeIn();
+			} else {
+				$('#back-top').fadeOut();
+			}
+		});
+
+		// scroll body to 0px on click
+		$('#back-top a').click(function () {
+			$('body,html').animate({
+				scrollTop: 0
+			}, 800);
+			return false;
+		});
+	});
+
+});
+</script>
+
+            
+			<div class="component" class="container">
+				<h2>Classificação</h2>
+				<p>Não importa quantos times tenham, se rolar a pagina para baixo, o cabeçalho irá acompanhar (**em teste**) , e se rolar para baixo irá aparecer um botão para ir direto ao topo!</p>
+				<table id="myTable" class="tablesorter">
+					<thead>
+						<tr>
+							<th class="mao">Times</th>
+							<th class="mao">Pontos</th>
+							<th class="mao">Jogos</th>
+							<th class="mao">Vitorias</th>
+							<th class="mao">Derrotas</th>
+							<th class="mao">Empates</th>
+							<th class="mao">Saldo</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>Time #01</th>
+							<td>12</td>
+							<td>4</td>
+							<td>4</td>
+							<td>0</td>
+							<td>0</td>
+							<td>+8</td>
+						</tr>
+						<tr>
+							<th>Time #02</th>
+							<td>9</td>
+							<td>3</td>
+							<td>3</td>
+							<td>1</td>
+							<td>0</td>
+							<td>+4</td>
+						</tr>
+						<tr>
+							<th>Time #03</th>
+							<td>4</td>
+							<td>4</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<th>Time #04</th>
+							<td>95</td>
+							<td>46</td>
+							<td>62</td>
+							<td>24</td>
+							<td>0</td>
+							<td>14</td>
+						</tr>
+						<tr>
+							<th>Time #05</th>
+							<td>19</td>
+							<td>66</td>
+							<td>31</td>
+							<td>99</td>
+							<td>0</td>
+							<td>77</td>
+						</tr>
+						<tr>
+							<th>Time #06</th>
+							<td>57</td>
+							<td>15</td>
+							<td>57</td>
+							<td>9</td>
+							<td>0</td>
+							<td>11</td>
+						</tr>
+						<tr>
+							<th>Time #07</th>
+							<td>69</td>
+							<td>46</td>
+							<td>16</td>
+							<td>33</td>
+							<td>0</td>
+							<td>85</td>
+						</tr>
+						<tr>
+							<th>Time #08</th>
+							<td>18</td>
+							<td>93</td>
+							<td>84</td>
+							<td>57</td>
+							<td>0</td>
+							<td>35</td>
+						</tr>
+						<tr>
+							<th>Time #09</th>
+							<td>92</td>
+							<td>10</td>
+							<td>69</td>
+							<td>35</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<th>Time #10</th>
+							<td>4</td>
+							<td>87</td>
+							<td>51</td>
+							<td>22</td>
+							<td>0</td>
+							<td>19</td>
+						</tr>
+						<tr>
+							<th>Time #11</th>
+							<td>24</td>
+							<td>23</td>
+							<td>85</td>
+							<td>34</td>
+							<td>83</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<th>Time #12</th>
+							<td>92</td>
+							<td>6</td>
+							<td>67</td>
+							<td>65</td>
+							<td>12</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<th>Time #13</th>
+							<td>10</td>
+							<td>77</td>
+							<td>64</td>
+							<td>51</td>
+							<td>0</td>
+							<td>63</td>
+						</tr>
+						<tr>
+							<th>Time #14</th>
+							<td>65</td>
+							<td>85</td>
+							<td>42</td>
+							<td>90</td>
+							<td>94</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<th>Time #15</th>
+							<td>34</td>
+							<td>48</td>
+							<td>38</td>
+							<td>6</td>
+							<td>21</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<th>Time #16</th>
+							<td>26</td>
+							<td>72</td>
+							<td>47</td>
+							<td>27</td>
+							<td>43</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<th>Time #17</th>
+							<td>79</td>
+							<td>86</td>
+							<td>85</td>
+							<td>10</td>
+							<td>10</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<th>Time #18</th>
+							<td>39</td>
+							<td>68</td>
+							<td>91</td>
+							<td>71</td>
+							<td>74</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<th>Time #19</th>
+							<td>70</td>
+							<td>4</td>
+							<td>59</td>
+							<td>82</td>
+							<td>10</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<th>Time #20</th>
+							<td>63</td>
+							<td>16</td>
+							<td>62</td>
+							<td>28</td>
+							<td>13</td>
+							<td>0</td>
+						</tr>
+					</tbody>
+				</table>
+
+<!--
+<div style="position:fixed; bottom:0px; right:0px;"><a href="#"><img src="file:///C|/wamp/www/futsalrg/img/1.png" 
+border="0" /></a></div>
+
+		<script src="js/jquery.stickyheader.js"></script> -->
+        
+<p id="back-top">
+		<a href="#top"><span></span>TOPO</a>
+	</p>
+     
+  		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
+        
+                <script>
+
+$(document).ready(function() 
+    { 
+        $("#myTable").tablesorter( {sortList: [[0,0], [1,0]]} ); 
+    } 
+); 
+
+</script>
+				
+
+
+        
+
+	</body>
+</html>
